@@ -62,16 +62,14 @@ var stickyHeaders = (function() {
     };
 })();
 
-var smothScroll = function(classEl) {
+var smothScroll = function(classEl, shift) {
     $(classEl).on('click', function(event) {
         if (this.hash !== "") {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function() {
-                window.location.hash = hash;
-            });
+                scrollTop: $(hash).offset().top - shift
+            }, 800);
         }
     });
 }
@@ -89,6 +87,5 @@ $(function() {
         }
     });
 
-    smothScroll('.b-methods__link')
- 
+    smothScroll('.b-methods__link', 60);
 });
