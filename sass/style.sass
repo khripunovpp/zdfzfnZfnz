@@ -46,7 +46,7 @@ select::-ms-expand
 
 %container
 	width: 100%
-	max-width: 1080px	
+	max-width: 970px	
 	padding: 0 15px
 	margin: 0 auto
 
@@ -90,6 +90,22 @@ select::-ms-expand
 	&__menu
 		display: table
 		float: right
+	&__toggle
+		display: none
+		vertical-align: middle
+		border: none
+		color: #FFF
+		font-weight: bold
+		padding: 10px 11px
+		height: 40px
+		border-radius: 4px
+		background-color: #ADC996
+		width: 40px
+		background-size: 25px auto
+		background-repeat: no-repeat
+		background-position: center center
+		background-image: url(../img/menu.png)
+		transition: all .4s
 	&__link
 		display: table-cell
 		vertical-align: middle
@@ -225,6 +241,11 @@ select::-ms-expand
 		margin: 0
 		&+&
 			margin-top: 15px
+		a
+			color: #373
+			font-weight: 700
+			&:hover
+				color: #4267b2
 	&__methods
 		background-color: #f6f8f7
 		padding: 8px 25px
@@ -266,7 +287,7 @@ select::-ms-expand
 		width: 100%
 		padding: 8px 25px
 		margin: 0
-		max-width: 750px
+		max-width: 640px
 		background-color: #f6f5f4
 		span
 			background-color: #93b874
@@ -307,6 +328,20 @@ select::-ms-expand
 		font-size: 16px
 		&+&
 			margin-top: 15px
+		a
+			color: #373
+			font-weight: 700
+			&:hover
+				color: #4267b2
+	&__list
+		font-size: 16px
+		li+li
+			margin-top: 15px
+		a
+			color: #373
+			font-weight: 700
+			&:hover
+				color: #4267b2
 	&__views
 		margin: 0
 	&__useful
@@ -318,7 +353,6 @@ select::-ms-expand
 		margin: 25px auto 0
 		font-size: 25px
 		text-transform: uppercase
-		text-decoration: none
 		color: #373
 		padding: 15px 30px
 		transition: all .4s
@@ -327,6 +361,7 @@ select::-ms-expand
 		&:hover
 			background-color: $color
 			color: #fff
+			text-decoration: none
 			&::after,
 			&::before
 				opacity: 1
@@ -386,12 +421,6 @@ select::-ms-expand
 		border: 1px solid #2483ef
 
 .b-comments
-	padding: 0 8px
-	-webkit-box-sizing: border-box
-	box-sizing: border-box
-	*
-		-webkit-box-sizing: inherit
-		box-sizing: inherit
 	&__head
 		margin: 0 0 25px
 		border-bottom: 1px solid #e9ebee
@@ -454,7 +483,13 @@ select::-ms-expand
 	&__text
 		margin: 8px 0
 		font-size: 16px
+		a
+			color: #373
+			font-weight: 700
+			&:hover
+				color: #4267b2
 	&__img
+		display: block
 		margin-top: 15px
 	&__links
 		font-size: 14px
@@ -489,8 +524,8 @@ select::-ms-expand
 		padding-bottom: 25%
 		@extend %part
 		background-clip: padding-box
-		background-image: url(../img/teaser1.jpg)
 		background-size: cover
+		background-position: 50% 50%
 		&:first-child
 			border-right: 12.5px solid transparent
 		&:last-child
@@ -499,6 +534,18 @@ select::-ms-expand
 			.b-teasers
 				&__title
 					padding-bottom: 15px
+		&--1
+			background-image: url(../img/teaser1.jpg)
+		&--2
+			background-image: url(../img/teaser1.jpg)
+		&--3
+			background-image: url(../img/teaser1.jpg)
+		&--4
+			background-image: url(../img/teaser1.jpg)
+		&--5
+			background-image: url(../img/teaser1.jpg)
+		&--6
+			background-image: url(../img/teaser1.jpg)
 	&__title
 		position: absolute
 		bottom: 0
@@ -507,8 +554,9 @@ select::-ms-expand
 		background-color: rgba(50,50,50,.5)
 		color: #fff
 		font-size: 16px
+		line-height: 1.2
 		font-weight: 700
-		padding: 12px
+		padding: 10px
 		margin: 0
 		transition: all .2s
 		&:hover
@@ -544,9 +592,9 @@ select::-ms-expand
 		@extend %part
 		position: relative
 		padding-bottom: 50%
-		background-image: url(../img/teaser1.jpg)
 		background-clip: padding-box
 		background-size: cover
+		background-position: 50% 50%
 		&:first-child
 			border-right: 7.5px solid transparent
 		&:last-child
@@ -572,6 +620,14 @@ select::-ms-expand
 			margin: 0
 			padding: 5px
 			transition: all .2s
+		&--1
+			background-image: url(../img/teaser1.jpg)
+		&--2
+			background-image: url(../img/teaser1.jpg)
+		&--3
+			background-image: url(../img/teaser1.jpg)
+		&--4
+			background-image: url(../img/teaser1.jpg)
 	&--teasers
 		margin-top: 1000px
 	&--voites

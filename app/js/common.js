@@ -62,6 +62,40 @@ var stickyHeaders = (function() {
     };
 })();
 
+var onResize = function(params) {
+    var _defautParams = {
+        before: function() {},
+        after: function() {},
+        breakPoint: 992
+    }
+    params = $.extend(_defautParams, params);
+
+    var a = 1,
+        b = 0,
+        flag = false,
+        stop = true;
+    $(window).on('resize', function() {
+        $(this).width() < params.breakPoint ?
+            b = 1 :
+            b = 0
+        a == b ?
+            flag = true :
+            flag = false
+    });
+
+    $(window).on('resize', function() {
+        if (flag && !stop) {
+            stop = true;
+            params.before();
+        }
+
+        if (!flag && stop) {
+            stop = false;
+            params.after();
+        }
+    })
+}
+
 var smothScroll = function(classEl, shift) {
     $(classEl).on('click', function(event) {
         if (this.hash !== "") {

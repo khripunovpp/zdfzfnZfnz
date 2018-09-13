@@ -1,20 +1,161 @@
 @import "bourbon"
 
 @media only screen and (max-width : 991px)
+	%container
+		max-width: 700px
+
 	.b-main__right
 		display: none
 
 	.b-panel
+		&__inner
+			padding: 12px
 		&__title
+			max-width: none
+			font-size: 12px
+			min-height: auto
+			padding-left: 12px
 			span
 				transition: none
+				width: 50px
+				height: auto
+				font-size: 0
+				top: 0
+				bottom: 0
+				padding-top: 5px
+			h2
+				margin: 0
 			&.fixed
 				max-width: none
 				left: 0
+				top: auto
+				position: relative
+				border-radius: 0
 				span
 					transform: none
 					border-radius: 0
-					left: 15px
-				h2
-					padding-left: 90px
+					left: 0
+		&__activelink
+			font-size: 18px
+			padding: 15px
+			width: 100%
+			max-width: 300px
+			text-align: center
+			margin-top: 15px
+			&:hover
+				&::after,
+				&::before
+					display: none
+		&--method
+			.b-panel
+				&__title
+					padding-left: 25px
+					h2
+						padding-left: 40px
 
+	.followWrap
+		height: auto !important
+
+	.b-top
+		font-size: 0
+		text-align: center
+		&__inner
+			display: block
+		&__left
+			display: block
+			padding: 10px 0
+		&__right
+			display: none
+		&__logo
+			margin: 0 15px
+		&__toggle
+			display: inline-block
+		&.fixed
+			.b-search__btn
+				padding: 10px 11px
+				height: 40px
+				background-size: 25px auto
+
+	.b-search
+		&__field
+			display: none
+		&__btn
+			position: relative
+			display: inline-block
+			width: 40px
+			height: 40px
+
+	.b-breadcrumbs
+		display: none
+
+	.b-theme
+		&__title
+			font-size: 18px
+			padding: 12px 12px 6px
+		&__methods
+			padding: 6px 12px
+		&__content
+			padding: 6px 12px 12px
+
+	.b-methods
+		&__link
+			display: block
+			margin: 5px 0
+
+	.b-teasers
+		&__row
+			display: block
+			&+&
+				margin-top: 12px
+		&__item
+			display: block
+			border: none !important
+			padding-bottom: 50%
+			&+&
+				margin-top: 12px
+		&__title
+			font-size: 14px
+			padding: 8px
+			line-height: 1.2
+
+	.b-comments
+		&__left
+			display: none
+		&__head
+			margin: 0 0 15px
+			line-height: 1.2
+		&__item
+			&:nth-child(-n+13)
+				display: none
+		&__links
+			&:last-of-type
+				&::after
+					display: none
+		&__date
+			display: block
+			margin-top: 8px
+
+	.b-footer
+		display: none
+
+@-moz-document url-prefix()
+	.b-panel
+		&__title
+			overflow: hidden
+			span
+				transition: none
+				font-size: 0
+				height: auto
+				top: 0
+				bottom: 0
+				padding-top: 8px
+			&.fixed
+				position: relative
+				top: auto !important
+				span
+					transform: none
+					border-radius: 0
+
+
+	.followWrap
+		height: auto !important
